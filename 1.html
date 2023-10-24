@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Главная</title>
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')
+    <main class="main">
+      <div class="tslider__w">
+        <div class="tslider__content">
+          <div class="contain">
+            <div class="tslider__title">Самые <span>свежие</span> <br> морепродукты <br> <span>почти у вас!</span></div>
+            <div class="tslider__text">Ловим и доставляем мы, <strong>а едите вы!</strong></div>
+            <a href="" class="tslider__btn">Хочу что-то выбрать</a>
+          </div>
+        </div>
+        <div class="tslider">
+          <img src="img/tslider1.jpg" alt="">
+          <img src="img/tslider1.jpg" alt="">
+          <img src="img/tslider1.jpg" alt="">
+          <img src="img/tslider1.jpg" alt="">
+          <img src="img/tslider1.jpg" alt="">
+        </div>
+      </div>
+      <div class="categories">
+        <div class="contain">
+          <div class="categories__row">
+            <a href="" class="categories__item">
+              <span class="categories__img-w"><img src="img/cat-1.jpg" class="categories__img" /></span>
+              <span class="categories__text">Креветки</span>
+            </a>
+            <a href="" class="categories__item">
+              <span class="categories__img-w"><img src="img/cat-2.jpg" class="categories__img" /></span>
+              <span class="categories__text">Краб</span>
+            </a>
+            <a href="" class="categories__item">
+              <span class="categories__img-w"><img src="img/cat-3.jpg" class="categories__img" /></span>
+              <span class="categories__text">Красная рыба</span>
+            </a>
+            <a href="" class="categories__item">
+              <span class="categories__img-w"><img src="img/cat-4.jpg" class="categories__img" /></span>
+              <span class="categories__text">Мидии</span>
+            </a>
+            <a href="" class="categories__item">
+              <span class="categories__img-w"><img src="img/cat-5.jpg" class="categories__img" /></span>
+              <span class="categories__text">Морепродукты</span>
+            </a>
+            <a href="" class="categories__item">
+              <span class="categories__img-w"><img src="img/cat-6.jpg" class="categories__img" /></span>
+              <span class="categories__text">Икра</span>
+            </a>
+            <a href="" class="categories__item">
+              <span class="categories__img-w"><img src="img/cat-7.jpg" class="categories__img" /></span>
+              <span class="categories__text">Рыба</span>
+            </a>
+            <a href="" class="categories__item">
+              <span class="categories__img-w"><img src="img/cat-8.jpg" class="categories__img" /></span>
+              <span class="categories__text">Рулет из рыбы</span>
+            </a>
+          </div>
+        </div>
+      </div> 
+      <div class="promo-products">
+        <div class="contain">
+          <div class="h2 _orange"><span>Акционные товары</span></div>
+          <div class="sproducts__row">
+            <div class="sproducts__col">
+              <div class="sproducts__item">
+                <div class="sproducts__top">
+                  <label class="sproducts__label">
+                    <input class="label-checkbox" type="checkbox" />
+                    <span></span>
+                  </label>
+                  <a href="" class="sproducts__img-w">
+                    <img src="img/prod-7.jpg" />
+                  </a>
+                </div>
+                <div class="sproducts__body">
+                  <a href="" class="sproducts__title">Семга холодного копчения</a>
+                  <div class="sproducts__rate">
+                    <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.2</span><a href="" class="sproducts__revs">3 отзыва<span class="sproducts__revs-bff"></span></a>
+                  </div>
+                  <div class="sproducts__prices">
+                    <div class="sproducts__sale">
+                      <span class="sale__per"><img src="img/flash.svg" class="sale__img" />-27%</span>289 ₽/100 гр.
+                    </div>
+                    <div class="sale__oldprice">260 ₽</div>
+                  </div>
+                  <div class="sproducts__actions">
+                    <div class="buy__quan">
+                      <div class="buy__quan-choice _minus"></div>
+                      <input type="text" value="1" />
+                      <div class="buy__quan-choice _plus"></div>
+                    </div>                
+                    <button class="sproducts__btn">В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    @@include('var/_footer.html')
+  </div>
+  <!--wrapper-->
+
+  @@include('var/_scripts.html')
+</body>
+
+</html>
