@@ -37,7 +37,7 @@
           <img src="img/tslider1.jpg" alt="">
         </div>
       </div>
-      <div class="categories">
+      <section class="categories">
         <div class="contain">
           <div class="categories__row">
             <a href="" class="categories__item">
@@ -74,48 +74,213 @@
             </a>
           </div>
         </div>
-      </div> 
-      <div class="promo-products">
+      </section> 
+      <section class="promo-products">
         <div class="contain">
           <div class="h2 _orange"><span>Акционные товары</span></div>
           <div class="sproducts__row">
             <div class="sproducts__col">
-              <div class="sproducts__item">
-                <div class="sproducts__top">
-                  <label class="sproducts__label">
-                    <input class="label-checkbox" type="checkbox" />
-                    <span></span>
-                  </label>
-                  <a href="" class="sproducts__img-w">
-                    <img src="img/prod-7.jpg" />
-                  </a>
-                </div>
-                <div class="sproducts__body">
-                  <a href="" class="sproducts__title">Семга холодного копчения</a>
-                  <div class="sproducts__rate">
-                    <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.2</span><a href="" class="sproducts__revs">3 отзыва<span class="sproducts__revs-bff"></span></a>
-                  </div>
-                  <div class="sproducts__prices">
-                    <div class="sproducts__sale">
-                      <span class="sale__per"><img src="img/flash.svg" class="sale__img" />-27%</span>289 ₽/100 гр.
-                    </div>
-                    <div class="sale__oldprice">260 ₽</div>
-                  </div>
-                  <div class="sproducts__actions">
-                    <div class="buy__quan">
-                      <div class="buy__quan-choice _minus"></div>
-                      <input type="text" value="1" />
-                      <div class="buy__quan-choice _plus"></div>
-                    </div>                
-                    <button class="sproducts__btn">В корзину</button>
-                  </div>
-                </div>
-              </div>
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-1.jpg",
+                "title":"Горбуша непотрошеная<br> с головой",
+                "rate":"4.9",
+                "rev":"3 отзыва",
+                "sale":"-24%",
+                "price":"249 ₽/кг.",
+                "curr":"",
+                "old":"330 ₽"
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-2.jpg",
+                "title":"Икра Горбуша 250 г. Премиум Путина 2023",
+                "rate":"4.3",
+                "rev":"33 отзыва",
+                "sale":"-13%",
+                "price":"1350 ₽",
+                "curr":"",
+                "old":"1550 ₽"
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-3.jpg",
+                "title":"КОРОБКА 5 кг. Магаданские креветки 60/80",
+                "rate":"1.5",
+                "rev":"321 отзыва",
+                "sale":"-16%",
+                "price":"7995 ₽",
+                "curr":"",
+                "old":"9 490 ₽"
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-4.jpg",
+                "title":"Лангустины (Langistino) L2, 2 кг.",
+                "rate":"4.9",
+                "rev":"3 отзыва",
+                "sale":"-24%",
+                "price":"1690 ₽",
+                "curr":"",
+                "old":"2450 ₽"
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-5.jpg",
+                "title":"Магаданские креветки (60/80 шт. в 1 кг.)",
+                "rate":"5",
+                "rev":"0 отзыва",
+                "sale":"-20%",
+                "price":"1599 ₽/кг.",
+                "curr":"",
+                "old":"1990 ₽"
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-6.jpg",
+                "title":"Печень трески натуральная 230 г.",
+                "rate":"4.9",
+                "rev":"3 отзыва",
+                "sale":"-15%",
+                "price":"450 ₽",
+                "curr":"",
+                "old":"640 ₽"
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-7.jpg",
+                "title":"Семга холодного копчения",
+                "rate":"4.2",
+                "rev":"3 отзыва",
+                "sale":"-27%",
+                "price":"289 ₽/100 гр.",
+                "curr":"",
+                "old":"260 ₽"
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-8.jpg",
+                "title":"Филе трески без кожи в кубиках",
+                "rate":"4",
+                "rev":"5 отзывов",
+                "sale":"-24%",
+                "price":"440 ₽/кг.",
+                "curr":"",
+                "old":"530 ₽"
+              })
             </div>
           </div>
         </div>
-
-      </div>
+      </section>
+      <section class="recommend-products">
+        <div class="contain">
+          <div class="h2 _blue"><span>Морепродукты №1 рекомендует</span></div>
+          <div class="sproducts__row">
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-9.jpg",
+                "title":"Морской коктейль<br> Морепродукты N1 500 г.",
+                "rate":"4.9",
+                "rev":"3 отзыва",
+                "sale":"",
+                "price":"",
+                "curr":"1 249 ₽",
+                "old":""
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-10.jpg",
+                "title":"Чёрная осетровая икра 'Волга'<br> 50 гр",
+                "rate":"4.2",
+                "rev":"33 отзыва",
+                "sale":"-13%",
+                "price":"1350 ₽",
+                "curr":"",
+                "old":"1550 ₽"
+              })
+            </div>
+             <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-11.jpg",
+                "title":"Клешня Камчатского краба, <br> Размер L2-L4",
+                "rate":"4.9",
+                "rev":"3 отзыва",
+                "sale":"",
+                "price":"",
+                "curr":"1 249 ₽",
+                "old":""
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-12.jpg",
+                "title":"Мясо краба (премиум) 520г.",
+                "rate":"4.9",
+                "rev":"3 отзыва",
+                "sale":"",
+                "price":"",
+                "curr":"1 249 ₽",
+                "old":""
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-13.jpg",
+                "title":"Стейки трески",
+                "rate":"4.9",
+                "rev":"3 отзыва",
+                "sale":"",
+                "price":"",
+                "curr":"1 249 ₽",
+                "old":""
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-14.jpg",
+                "title":"Стейки семги",
+                "rate":"4.9",
+                "rev":"3 отзыва",
+                "sale":"",
+                "price":"",
+                "curr":"1 249 ₽",
+                "old":""
+              })
+            </div>
+            <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-15.jpg",
+                "title":"Тунец Холодного копчения",
+                "rate":"4.9",
+                "rev":"3 отзыва",
+                "sale":"",
+                "price":"",
+                "curr":"1 249 ₽",
+                "old":""
+              })
+            </div>
+             <div class="sproducts__col">
+              @@include('var/_sproducts__item.html',{
+                "img":"img/prod-16.jpg",
+                "title":"Магаданские креветки <br> (60/80 шт. в 1 кг.)",
+                "rate":"5",
+                "rev":"0 отзыва",
+                "sale":"-20%",
+                "price":"1599 ₽/кг.",
+                "curr":"",
+                "old":"1990 ₽"
+              })
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('var/_footer.html')
   </div>
