@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2. Категория</title>
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')
+    <main class="main">
+
+      <div class="catalog">
+        <div class="contain">
+          <ul class="bread">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Морепродукты</a></li>
+            <li>Креветки</li>
+          </ul>
+
+
+
+
+          <div class="catalog__row">
+            <div class="catalog__l">
+            </div>
+            <div class="catalog__r">
+
+              <div class="catalog__top">
+                <h1 class="catalog__h1">Креветки</h1>
+                <div class="catalog__actions">
+                  <select class="catalog__select-1">
+                    <option value="По умолчанию">По умолчанию</option>
+                    <option value="По цене">По цене</option>
+                  </select>
+                  <select>
+                    <option value="32">32</option>
+                    <option value="64">64</option>                    
+                  </select>
+
+                  <ul class="spagin">                    
+                    <li><a class="prev" href="#">Назад</a></li>
+                    <li><a class="active" href="#">1</a></li>
+                    <li><a href="#">2</a></li>                    
+                    <li><a class="none" href="#">...</a></li>
+                    <li><a href="#">21</a></li>                    
+                    <li><a class="next" href="#">Далее</a></li>                    
+                  </ul>
+                </div>
+              </div>
+
+            </div>            
+          </div>
+        </div>
+      </div>
+
+    </main>
+    @@include('var/_footer.html')
+  </div>
+  <!--wrapper-->
+
+
+
+  @@include('var/_scripts.html')
+</body>
+
+</html>
