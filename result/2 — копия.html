@@ -7,7 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>2. Категория</title>
-  @@include('var/_styless.html')
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/select2.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -18,7 +25,61 @@
 
 <body>
   <div class="wrapper">
-    @@include('var/_header.html')
+    <header class="header">
+  <div class="top">
+    <img src="img/fish1.svg" alt="" class="fish1">
+    <div class="contain">
+      <div class="top__row">
+        <ul class="top__ul">
+          <li><a href="">О нас</a></li>
+          <li><a href="">Доставка и оплата</a></li>
+          <li><a href="">Полезная информация</a></li>
+          <li><a href="">Контакты</a></li>
+          <li><a href="">Отзывы</a></li>
+          <li><a href="">Рецепты</a></li>
+        </ul>
+        <div class="fishes">
+          <img class="fish2" src="img/fish2.svg">
+          <img class="fish3" src="img/fish3.svg">
+        </div>
+        <a href="" class="shops">
+          <span>Наши магазины</span>            
+        </a>
+        <a href="" class="user">
+          <span>Личный кабинет</span>
+        </a>
+      </div>
+    </div>
+    <img src="img/fish4.svg" alt="" class="fish4">
+  </div>
+  <div class="top2">
+    <div class="contain">
+      <div class="top2__row">
+        <a href="index.html" class="logo"><img src="img/logo.svg" /></a>
+        <div class="top2__actions">
+          <a href="" class="burger"><img src="img/burger.svg" />Каталог</a>
+          <form class="top2__form">
+            <input class="top2__input" type="text" placeholder="Поиск по 1439 продуктам" />
+            <a href="" class="top2__btn"></a>
+          </form>
+        </div>
+        <div class="top2__info">
+          <div class="top2__tel-w">
+            <a href="tel:8 (925) 225-27-70" class="top2__tel">8 (925) 225-27-70</a>
+            <p class="top2__works">Ежедневно с 10:00 до 22:00</p>
+          </div>
+          <a href="" class="top2__cart">
+            <span class="tcart__img-w">
+              <img src="img/cart.svg" />
+              <span class="tcart__num">2</span>
+            </span>
+            <span class="tcart__text">Корзина</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
     <main class="main">
       <div class="catalog">
         <div class="contain">
@@ -28,7 +89,7 @@
             <li>Креветки</li>
           </ul>
           <div class="catalog__top">
-            <h1 class="h1 catalog__h1">Креветки</h1>
+            <h1 class="catalog__h1">Креветки</h1>
             <div class="catalog__actions">
               <select class="catalog__select-1">
                 <option value="По умолчанию">По умолчанию</option>
@@ -398,159 +459,489 @@
             <div class="catalog__r">
               <div class="catalog__list">
                <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-1.jpg",
-                  "title":"Горбуша непотрошеная<br> с головой",
-                  "rate":"4.9",
-                  "rev":"3 отзыва",
-                  "sale":"-24%",
-                  "price":"249 ₽/кг.",
-                  "curr":"",
-                  "old":"330 ₽"
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-1.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Горбуша непотрошеная<br> с головой</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.9</span><a href="" class="sproducts__revs">3 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price"></div>
+        <div class="sproducts__sale">
+          <span class="sale__per">-24%</span>
+          <div class="sale__price">249 ₽/кг.</div>
+        </div>
+        <div class="sale__oldprice">330 ₽</div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-2.jpg",
-                  "title":"Икра Горбуша 250 г. Премиум Путина 2023",
-                  "rate":"4.3",
-                  "rev":"33 отзыва",
-                  "sale":"-13%",
-                  "price":"1350 ₽",
-                  "curr":"",
-                  "old":"1550 ₽"
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-2.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Икра Горбуша 250 г. Премиум Путина 2023</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.3</span><a href="" class="sproducts__revs">33 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price"></div>
+        <div class="sproducts__sale">
+          <span class="sale__per">-13%</span>
+          <div class="sale__price">1350 ₽</div>
+        </div>
+        <div class="sale__oldprice">1550 ₽</div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-3.jpg",
-                  "title":"КОРОБКА 5 кг. Магаданские креветки 60/80",
-                  "rate":"1.5",
-                  "rev":"321 отзыва",
-                  "sale":"-16%",
-                  "price":"7995 ₽",
-                  "curr":"",
-                  "old":"9 490 ₽"
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-3.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">КОРОБКА 5 кг. Магаданские креветки 60/80</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">1.5</span><a href="" class="sproducts__revs">321 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price"></div>
+        <div class="sproducts__sale">
+          <span class="sale__per">-16%</span>
+          <div class="sale__price">7995 ₽</div>
+        </div>
+        <div class="sale__oldprice">9 490 ₽</div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-4.jpg",
-                  "title":"Лангустины (Langistino) L2, 2 кг.",
-                  "rate":"4.9",
-                  "rev":"3 отзыва",
-                  "sale":"-24%",
-                  "price":"1690 ₽",
-                  "curr":"",
-                  "old":"2450 ₽"
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-4.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Лангустины (Langistino) L2, 2 кг.</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.9</span><a href="" class="sproducts__revs">3 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price"></div>
+        <div class="sproducts__sale">
+          <span class="sale__per">-24%</span>
+          <div class="sale__price">1690 ₽</div>
+        </div>
+        <div class="sale__oldprice">2450 ₽</div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-5.jpg",
-                  "title":"Магаданские креветки (60/80 шт. в 1 кг.)",
-                  "rate":"5",
-                  "rev":"0 отзыва",
-                  "sale":"-20%",
-                  "price":"1599 ₽/кг.",
-                  "curr":"",
-                  "old":"1990 ₽"
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-5.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Магаданские креветки (60/80 шт. в 1 кг.)</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">5</span><a href="" class="sproducts__revs">0 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price"></div>
+        <div class="sproducts__sale">
+          <span class="sale__per">-20%</span>
+          <div class="sale__price">1599 ₽/кг.</div>
+        </div>
+        <div class="sale__oldprice">1990 ₽</div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-6.jpg",
-                  "title":"Печень трески натуральная 230 г.",
-                  "rate":"4.9",
-                  "rev":"3 отзыва",
-                  "sale":"-15%",
-                  "price":"450 ₽",
-                  "curr":"",
-                  "old":"640 ₽"
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-6.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Печень трески натуральная 230 г.</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.9</span><a href="" class="sproducts__revs">3 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price"></div>
+        <div class="sproducts__sale">
+          <span class="sale__per">-15%</span>
+          <div class="sale__price">450 ₽</div>
+        </div>
+        <div class="sale__oldprice">640 ₽</div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-7.jpg",
-                  "title":"Семга холодного копчения",
-                  "rate":"4.2",
-                  "rev":"3 отзыва",
-                  "sale":"-27%",
-                  "price":"289 ₽/100 гр.",
-                  "curr":"",
-                  "old":"260 ₽"
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-7.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Семга холодного копчения</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.2</span><a href="" class="sproducts__revs">3 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price"></div>
+        <div class="sproducts__sale">
+          <span class="sale__per">-27%</span>
+          <div class="sale__price">289 ₽/100 гр.</div>
+        </div>
+        <div class="sale__oldprice">260 ₽</div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-8.jpg",
-                  "title":"Филе трески без кожи в кубиках",
-                  "rate":"4",
-                  "rev":"5 отзывов",
-                  "sale":"-24%",
-                  "price":"440 ₽/кг.",
-                  "curr":"",
-                  "old":"530 ₽"
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-8.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Филе трески без кожи в кубиках</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4</span><a href="" class="sproducts__revs">5 отзывов<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price"></div>
+        <div class="sproducts__sale">
+          <span class="sale__per">-24%</span>
+          <div class="sale__price">440 ₽/кг.</div>
+        </div>
+        <div class="sale__oldprice">530 ₽</div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>  
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-9.jpg",
-                  "title":"Морской коктейль<br> Морепродукты N1 500 г.",
-                  "rate":"4.9",
-                  "rev":"3 отзыва",
-                  "sale":"",
-                  "price":"",
-                  "curr":"1 249 ₽",
-                  "old":""
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-9.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Морской коктейль<br> Морепродукты N1 500 г.</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.9</span><a href="" class="sproducts__revs">3 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price">1 249 ₽</div>
+        <div class="sproducts__sale">
+          <span class="sale__per"></span>
+          <div class="sale__price"></div>
+        </div>
+        <div class="sale__oldprice"></div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-10.jpg",
-                  "title":"Чёрная осетровая икра 'Волга'<br> 50 гр",
-                  "rate":"4.2",
-                  "rev":"33 отзыва",
-                  "sale":"-13%",
-                  "price":"1350 ₽",
-                  "curr":"",
-                  "old":"1550 ₽"
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-10.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Чёрная осетровая икра 'Волга'<br> 50 гр</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.2</span><a href="" class="sproducts__revs">33 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price"></div>
+        <div class="sproducts__sale">
+          <span class="sale__per">-13%</span>
+          <div class="sale__price">1350 ₽</div>
+        </div>
+        <div class="sale__oldprice">1550 ₽</div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-11.jpg",
-                  "title":"Клешня Камчатского краба, <br> Размер L2-L4",
-                  "rate":"4.9",
-                  "rev":"3 отзыва",
-                  "sale":"",
-                  "price":"",
-                  "curr":"1 249 ₽",
-                  "old":""
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-11.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Клешня Камчатского краба, <br> Размер L2-L4</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.9</span><a href="" class="sproducts__revs">3 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price">1 249 ₽</div>
+        <div class="sproducts__sale">
+          <span class="sale__per"></span>
+          <div class="sale__price"></div>
+        </div>
+        <div class="sale__oldprice"></div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
               <div class="sproducts__col">
-                @@include('var/_sproducts__item.html',{
-                  "img":"img/prod-12.jpg",
-                  "title":"Мясо краба (премиум) 520г.",
-                  "rate":"4.9",
-                  "rev":"3 отзыва",
-                  "sale":"",
-                  "price":"",
-                  "curr":"1 249 ₽",
-                  "old":""
-                })
+                <div class="sproducts__item">
+  <div class="sproducts__top">
+    <label class="sproducts__label">
+      <input class="label-checkbox" type="checkbox" />
+      <span></span>
+    </label>
+    <a href="" class="sproducts__img-w">
+      <img src="img/prod-12.jpg" />
+    </a>
+  </div>
+  <div class="sproducts__body">
+    <div class="sproducts__title"><a href="">Мясо краба (премиум) 520г.</a></div>
+    <div class="sproducts__rate">
+      <img src="img/star.svg" class="" /><span class="sproducts__rate-txt">4.9</span><a href="" class="sproducts__revs">3 отзыва<span class="sproducts__revs-bff"></span></a>
+    </div>
+    <div class="sproducts__bottom">
+      <div class="sproducts__prices">
+        <div class="sproducts__price">1 249 ₽</div>
+        <div class="sproducts__sale">
+          <span class="sale__per"></span>
+          <div class="sale__price"></div>
+        </div>
+        <div class="sale__oldprice"></div>
+      </div>
+      <div class="sproducts__actions">
+        <div class="buy__quan">
+          <div class="buy__quan-choice _minus"></div>
+          <input type="text" value="1" />
+          <div class="buy__quan-choice _plus"></div>
+        </div>                
+        <button class="sproducts__btn">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div> 
             </div>
-            @@include('var/_spagin2.html')
+            <ul class="spagin">                    
+              <li><a class="disabled prev" href="#">Назад</a></li>
+              <li><a class="active" href="#">1</a></li>
+              <li><a href="#">2</a></li>                    
+              <li><a href="#">3</a></li>                    
+              <li><a href="#">4</a></li>                    
+              <li><a href="#">5</a></li>                    
+              <li><a href="#">6</a></li>                    
+              <li><a href="#">7</a></li>                    
+              <li><a href="#">8</a></li>                    
+              <li><a class="none" href="#">...</a></li>
+              <li><a href="#">21</a></li>                    
+              <li><a class="next" href="#">Далее</a></li>                    
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </main>
-  @@include('var/_footer.html')
+  <footer class="footer">  
+  
+</footer>
 </div>
 <!--wrapper-->
-@@include('var/_scripts.html')
+<a href="" class="fav">
+  <span class="fav__info" style=""><img src="img/fav.svg">
+    <span
+    class="fav__count">2</span>
+  </span>
+  <span class="fav__text">Избранное
+    <span class="fav__text-after"></span>
+  </span>
+</a>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/nouislider.js"></script>
+<script src="js/wNumb.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>

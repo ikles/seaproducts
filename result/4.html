@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4. Список рецептов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/select2.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="css/main.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+  <div class="top">
+    <img src="img/fish1.svg" alt="" class="fish1">
+    <div class="contain">
+      <div class="top__row">
+        <ul class="top__ul">
+          <li><a href="">О нас</a></li>
+          <li><a href="">Доставка и оплата</a></li>
+          <li><a href="">Полезная информация</a></li>
+          <li><a href="">Контакты</a></li>
+          <li><a href="">Отзывы</a></li>
+          <li><a href="">Рецепты</a></li>
+        </ul>
+        <div class="fishes">
+          <img class="fish2" src="img/fish2.svg">
+          <img class="fish3" src="img/fish3.svg">
+        </div>
+        <a href="" class="shops">
+          <span>Наши магазины</span>            
+        </a>
+        <a href="" class="user">
+          <span>Личный кабинет</span>
+        </a>
+      </div>
+    </div>
+    <img src="img/fish4.svg" alt="" class="fish4">
+  </div>
+  <div class="top2">
+    <div class="contain">
+      <div class="top2__row">
+        <a href="index.html" class="logo"><img src="img/logo.svg" /></a>
+        <div class="top2__actions">
+          <a href="" class="burger"><img src="img/burger.svg" />Каталог</a>
+          <form class="top2__form">
+            <input class="top2__input" type="text" placeholder="Поиск по 1439 продуктам" />
+            <a href="" class="top2__btn"></a>
+          </form>
+        </div>
+        <div class="top2__info">
+          <div class="top2__tel-w">
+            <a href="tel:8 (925) 225-27-70" class="top2__tel">8 (925) 225-27-70</a>
+            <p class="top2__works">Ежедневно с 10:00 до 22:00</p>
+          </div>
+          <a href="" class="top2__cart">
+            <span class="tcart__img-w">
+              <img src="img/cart.svg" />
+              <span class="tcart__num">2</span>
+            </span>
+            <span class="tcart__text">Корзина</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <main class="main">
+      <div class="precepies">
+        <div class="contain">
+          <ul class="bread">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Морепродукты</a></li>
+            <li>Креветки</li>
+          </ul>
+          <h1 class="h1">Вкусные рецепты</h1>
+          <div class="precepies__list">
+           <div class="recipes__col">
+            <div class="recipes__item">
+  <a href="" class="recipes__img-w"><img src="img/recipes-1.jpg"></a>
+  <div class="recipes__inf">    
+    <div class="recipes__name">
+      <a href="">Креветочный коктейль</a>
+    </div>
+    <div class="recipes__txt">Коктейль из креветок - это классика. Вкусно, свежо, самодостаточно. Ну, можно еще ложечку красной икорки сверху добавить...</div>
+    <div class="recipes__date">4 февраля 2023</div>
+  </div>
+</div>
+          </div>
+          <div class="recipes__col">
+            <div class="recipes__item">
+  <a href="" class="recipes__img-w"><img src="img/recipes-2.jpg"></a>
+  <div class="recipes__inf">    
+    <div class="recipes__name">
+      <a href="">Радужная форель как в СССР</a>
+    </div>
+    <div class="recipes__txt">Моя бабуля рассказывала, что в советских ресторанах форель порционная подавалась с зеленью и свежими овощами и просто была зажарена в сливочном масле...</div>
+    <div class="recipes__date">6 мая 2023</div>
+  </div>
+</div>
+          </div>
+          <div class="recipes__col">
+            <div class="recipes__item">
+  <a href="" class="recipes__img-w"><img src="img/recipes-3.jpg"></a>
+  <div class="recipes__inf">    
+    <div class="recipes__name">
+      <a href="">Паста с Вонголе</a>
+    </div>
+    <div class="recipes__txt">Готовим пасту с ракушками вонголе...</div>
+    <div class="recipes__date">29 декабря 2022</div>
+  </div>
+</div>
+          </div>
+          <div class="recipes__col">
+            <div class="recipes__item">
+  <a href="" class="recipes__img-w"><img src="img/recipes-4.jpg"></a>
+  <div class="recipes__inf">    
+    <div class="recipes__name">
+      <a href="">Рыбные котлеты из фарша лососевых</a>
+    </div>
+    <div class="recipes__txt">Готовим рыбные котлетки и супчик с фрикадельками из нежнейшего фарша лососёвых...</div>
+    <div class="recipes__date">3 июля 2022</div>
+  </div>
+</div>
+          </div>    
+          <div class="recipes__col">
+            <div class="recipes__item">
+  <a href="" class="recipes__img-w"><img src="img/recipes-2.jpg"></a>
+  <div class="recipes__inf">    
+    <div class="recipes__name">
+      <a href="">Радужная форель как в СССР</a>
+    </div>
+    <div class="recipes__txt">Моя бабуля рассказывала, что в советских ресторанах форель порционная подавалась с зеленью и свежими овощами и просто была зажарена в сливочном масле...</div>
+    <div class="recipes__date">6 мая 2023</div>
+  </div>
+</div>
+          </div>
+          <div class="recipes__col">
+            <div class="recipes__item">
+  <a href="" class="recipes__img-w"><img src="img/recipes-1.jpg"></a>
+  <div class="recipes__inf">    
+    <div class="recipes__name">
+      <a href="">Креветочный коктейль</a>
+    </div>
+    <div class="recipes__txt">Коктейль из креветок - это классика. Вкусно, свежо, самодостаточно. Ну, можно еще ложечку красной икорки сверху добавить...</div>
+    <div class="recipes__date">4 февраля 2023</div>
+  </div>
+</div>
+          </div>
+          <div class="recipes__col">
+            <div class="recipes__item">
+  <a href="" class="recipes__img-w"><img src="img/recipes-4.jpg"></a>
+  <div class="recipes__inf">    
+    <div class="recipes__name">
+      <a href="">Рыбные котлеты из фарша лососевых</a>
+    </div>
+    <div class="recipes__txt">Готовим рыбные котлетки и супчик с фрикадельками из нежнейшего фарша лососёвых...</div>
+    <div class="recipes__date">3 июля 2022</div>
+  </div>
+</div>
+          </div> 
+          <div class="recipes__col">
+            <div class="recipes__item">
+  <a href="" class="recipes__img-w"><img src="img/recipes-3.jpg"></a>
+  <div class="recipes__inf">    
+    <div class="recipes__name">
+      <a href="">Паста с Вонголе</a>
+    </div>
+    <div class="recipes__txt">Готовим пасту с ракушками вонголе...</div>
+    <div class="recipes__date">29 декабря 2022</div>
+  </div>
+</div>
+          </div>
+        </div>
+        <ul class="spagin">                    
+  <li><a class="disabled prev" href="#">Назад</a></li>
+  <li><a class="active" href="#">1</a></li>
+  <li><a href="#">2</a></li>                    
+  <li><a href="#">3</a></li>                    
+  <li><a href="#">4</a></li>                    
+  <li><a href="#">5</a></li>                    
+  <li><a href="#">6</a></li>                    
+  <li><a href="#">7</a></li>                    
+  <li><a href="#">8</a></li>                    
+  <li><a class="none" href="#">...</a></li>
+  <li><a href="#">21</a></li>                    
+  <li><a class="next" href="#">Далее</a></li>                    
+</ul>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"> 
+  <div class="ffishes__row">
+    <img class="ffish1" src="img/ffish1.svg">
+    <div class="ffishes">
+      <img class="ffish2" src="img/ffish2.svg">
+      <img class="ffish3" src="img/ffish3.svg">  
+    </div>
+    <img class="ffish4" src="img/ffish4.svg">
+  </div>
+  <div class="contain">
+    <div class="footer__w">
+      <div class="footer__col-1">
+        <a href="" class="footer__logo">Морепродукты №1</a>
+        <div class="footer__tag"><img src="img/logo-foot.svg" /></div>
+        <div class="footer__date-w">
+          <div class="footer__date">
+            © 2023—2024
+          </div>
+        </div>
+      </div>
+      <div class="footer__col-2">
+        <div class="footer__col-2-mode">
+          <div class="footer__subtitle">Режим работы</div>
+          <div class="footer__hours">Ежедневно с 10:00 до 22:00</div>
+        </div>
+        <div class="footer__socs">
+          <div class="footer__subtitle">Мы в соц. сетях</div>
+          <div class="footer__socs-w">
+            <a href=""><img src="img/soc-1.svg" /></a>
+            <a href=""><img src="img/soc-2.svg" /></a>
+          </div>
+        </div>
+        <div class="footer__rew">
+          <div class="footer__subtitle">Отзывы на Яндекс.Картах</div>
+          <div class="footer__rew-row">
+            <a href=""><img src="img/rew.jpg" /></a>
+            <a href=""><img src="img/rew.jpg" /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__col-3">
+        <div class="footer__adress">
+          <a href="" class="footer__cont">Московская обл., д. Путилково, <br> ул. Новотушинская 4</a>
+          <a href="tel:+7(925) 225-27-70" class="footer__cont-phone">+7(925) 225-27-70</a>
+        </div>
+        <div class="footer__adress">
+          <a href="" class="footer__cont">г. Москва, ул. Александры <br> Монаховой, 92, корпус 3</a>
+          <a href="tel:+7(925) 721-86-65" class="footer__cont-phone">+7(925) 721-86-65</a>
+        </div>
+        <a href="mailto:info@moreproduct1.ru" class="footer__mail">info@moreproduct1.ru</a>
+        <div class="footer__mess">
+          <div class="footer__mess-row">
+            <a href=""><img src="img/mess-1.svg" /></a>
+            <a href=""><img src="img/mess-2.svg" /></a>
+            <a href=""><img src="img/mess-3.svg" /></a>
+          </div>
+          <div class="footer__mess-txt">— наши мессенджеры</div>
+        </div>
+      </div>
+      <div class="footer__col-4">
+        <div class="footer__subtitle">Информация</div>
+        <ul>
+          <li><a href="">О нас</a></li>
+          <li><a href="">Доставка и оплата</a></li>
+          <li><a href="">Наши гарантии</a></li>
+          <li><a href="">Политика безопасности</a></li>
+          <li><a href="">Как сделать заказ</a></li>
+          <li><a href="">Контакты</a></li>
+          <li><a href="">Акции!</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<!--wrapper-->
+<a href="" class="fav">
+  <span class="fav__info" style=""><img src="img/fav.svg">
+    <span
+    class="fav__count">2</span>
+  </span>
+  <span class="fav__text">Избранное
+    <span class="fav__text-after"></span>
+  </span>
+</a>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/nouislider.js"></script>
+<script src="js/wNumb.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3. Карточка</title>
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div class="wrapper">
+    @@include('var/_header.html')
+    <main class="main">
+      <div class="card">
+        <div class="contain">
+          <ul class="bread">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Морепродукты</a></li>
+            <li><a href="">Креветки</a></li>
+            <li>Гренландские креветки 80/100</li>
+          </ul>
+          <h1 class="h1">Гренландские креветки 80/100</h1>
+          <div class="card__header">
+
+          </div><!--card__header-->
+          <div class="pl120">
+            <div class="card__recepies">
+              <div class="recipes__col">
+                @@include('var/_recipes__item.html',{
+                  "title":"Креветочный коктейль",
+                  "txt":"Коктейль из креветок - это классика. Вкусно, свежо, самодостаточно. Ну, можно еще ложечку красной икорки сверху добавить...",
+                  "date":"4 февраля 2023",
+                  "img": "img/recipes-1.jpg"
+                })
+              </div>
+              <div class="recipes__col">
+                @@include('var/_recipes__item.html',{
+                  "title":"Радужная форель как в СССР",
+                  "txt":"Моя бабуля рассказывала, что в советских ресторанах форель порционная подавалась с зеленью и свежими овощами и просто была зажарена в сливочном масле...",
+                  "date":"6 мая 2023",
+                  "img": "img/recipes-2.jpg"
+                })
+              </div>
+              <div class="recipes__col">
+                @@include('var/_recipes__item.html',{
+                  "title":"Паста с Вонголе",
+                  "txt":"Готовим пасту с ракушками вонголе...",
+                  "date":"29 декабря 2022",
+                  "img": "img/recipes-3.jpg"
+                })
+              </div>
+              <div class="recipes__col">
+                @@include('var/_recipes__item.html',{
+                  "title":"Рыбные котлеты из фарша лососевых",
+                  "txt":"Готовим рыбные котлетки и супчик с фрикадельками из нежнейшего фарша лососёвых...",
+                  "date":"3 июля 2022",
+                  "img": "img/recipes-4.jpg"
+                })
+              </div>
+            </div>
+          </div><!--pl120-->
+        </div><!--contain-->
+      </div>
+    </main>
+    @@include('var/_footer.html')
+  </div>
+  <!--wrapper-->
+  @@include('var/_scripts.html')
+</body>
+</html>

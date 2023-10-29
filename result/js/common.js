@@ -1,6 +1,6 @@
 jQuery(document).ready(function( $ ) {
 
-  
+
 
   $('body').click(function () {
     if( $(".toggle-mnu").hasClass("on") ){
@@ -149,24 +149,101 @@ $('.eye-3').click(function (e) {
     });
   }
 
-  $('.accordion-header').toggleClass('inactive-header');
-  $('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
-  $('.accordion-content').first().slideDown().toggleClass('open-content');
-  $('.accordioon-content').first().slideDown().toggleClass('open-content');
-  $('.accordion-header').click(function () {
-    if($(this).is('.inactive-header')) {
-      $('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
-      $(this).toggleClass('active-header').toggleClass('inactive-header');
-      $(this).next().slideToggle().toggleClass('open-content');
-    }
 
-    else {
-      $(this).toggleClass('active-header').toggleClass('inactive-header');
-      $(this).next().slideToggle().toggleClass('open-content');
-    }
+  $(".curr").on("keyup", function(){  
+    const self = $(this);
+    $(this).val(String(self.val().replace(/[^0-9.]/g,'')).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₽')
   });
 
-  return false;
 
+//RANGE
+  const priceSlider = document.querySelector('.price__range');
+  if (priceSlider) {
+
+//let textFrom = priceSlider.getAttribute('data-from');
+    let textTo = priceSlider.getAttribute('data-to');
+
+    noUiSlider.create(priceSlider, {
+      start: [2500, 10500],
+      connect: true,
+      step: 50,
+      tooltips: [wNumb({ thousand: ' ', decimals: 0, prefix: '' + '' }), wNumb({ thousand: ' ', decimals: 0, prefix: '' + '' })],
+      range: {
+        'min': [0],
+        'max': [40000]
+      }    
+    });
+
+    priceSlider.noUiSlider.removeTooltips();
+
+
+    const priceStart = document.getElementById('price-start');
+    const priceEnd = document.getElementById('price-end');
+
+    const priceTotalStart = document.getElementById('price__total-start');
+    const priceTotalEnd = document.getElementById('price__total-end');
+    
+
+    //Значения из ползунков в инпуты
+    priceSlider.noUiSlider.on('update', function(values, handle) {
+
+
+
+      priceStart.value = (+Math.round(priceSlider.noUiSlider.get()[0])).toLocaleString('ru');
+      priceEnd.value = (+Math.round(priceSlider.noUiSlider.get()[1])).toLocaleString('ru');
+
+      priceTotalStart.innerHTML = (+Math.round(priceSlider.noUiSlider.get()[0])).toLocaleString('ru');
+      priceTotalEnd.innerHTML = (+Math.round(priceSlider.noUiSlider.get()[1])).toLocaleString('ru');    
+    });
+
+
+
+
+    //Изменив значения в инпуте и нажав enter толзунки применяют нужное положение в зависимости от значения
+    priceStart.addEventListener('change', setPriceValues);
+    priceEnd.addEventListener('change', setPriceValues);
+
+
+    function setPriceValues() {
+      let priceStartValue;
+      let priceEndValue;
+      if (priceStart.value != '') {
+        priceStartValue = priceStart.value;
+      }
+      if (priceEnd.value != '') {
+        priceEndValue = priceEnd.value;
+      }
+      priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
+} //spV
+}// if priceSlider
+
+
+
+
+
+
+
+
+/*$('.accordion-header').click(function () {
+  if($(this).is('.inactive-header')) {
+    $('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
+    $(this).toggleClass('active-header').toggleClass('inactive-header');
+    $(this).next().slideToggle().toggleClass('open-content');
+  }
+  else {
+    $(this).toggleClass('active-header').toggleClass('inactive-header');
+    $(this).next().slideToggle().toggleClass('open-content');
+  }
+});*/
+
+
+//$('.accordion-content').first().slideDown().toggleClass('open-content');
+
+$('.accordion-header').click(function () {
+  $(this).toggleClass('active-header');
+  $(this).next().slideToggle().toggleClass('open-content');
+});
+
+return false;
 }); //ready
 
