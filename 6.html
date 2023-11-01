@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6. Текстовая страница</title>
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div class="wrapper">
+    @@include('var/_header.html')
+    <main class="main">
+      <div class="text">
+        <div class="contain">
+          <ul class="bread">
+            <li><a href="">Главная</a></li>            
+            <li>Рецепты</li>
+          </ul>
+          <div class="text__content">
+            <h1 class="h1">Доставка и оплата</h1>
+            <p>Заказы оформленные после 15:00 доставляем на следующий день или в любой удобный для Вас день. По согласованию с менеджером магазина возможна доставка с помощью сервиса Яндекс.Курьер «<b>День в день</b>», даже если заказ оформлен после 15:00 в кратчайшие сроки.</p>
+            <p><b>Доставка по Москве в пределах МКАД:</b></p>
+            <ul>
+              <li>Бесплатно от <b>4000 ₽</b></li>
+              <li>При заказе <b>до 4000 ₽</b> доставка <b>399 ₽</b></li>
+              <li>Доставка к точному времени в пределах МКАД <b>+500₽</b> к стоимости доставки (за МКАД уточняется у менеджера)</li>
+            </ul>
+            <div class="h2 _orange">Оплата</div>
+            <p>Оплата заказа осуществляется при получении продукции, мы принимаем: наличные, банковские карты (<a href="">Visa</a>, <a href="">MasterCard</a>, <a href="">Maestro</a> и <a href="">МИР</a>) или перевод <a href="">СБП</a>.</p>
+            <p><b>По вопросам оплаты и доставки:</b></p>
+            <p class="messages">
+              WhatsApp: +7(925) 225-27-70 <br>
+              Telegram: +7(925) 225-27-70 <br>
+              Телефон: +7(925) 225-27-70
+            </p>
+            <div class="sapar2"></div>
+            <br>          
+            <br>          
+                
+            <p><b class="_orange">Важно!</b> При оформлении заказа специальные акции и промокоды не суммируются!</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('var/_footer.html')
+  </div>
+  <!--wrapper-->
+  @@include('var/_scripts.html')
+</body>
+</html>

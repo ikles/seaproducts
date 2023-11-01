@@ -6,7 +6,7 @@
   <!--meta name="viewport" content="width=1200px"-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>3. Карточка</title>
+  <title>5. Рецепт</title>
   @@include('var/_styless.html')
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,21 +20,219 @@
   <div class="wrapper">
     @@include('var/_header.html')
     <main class="main">
-      <div class=" ">
+      <div class="specipe">
         <div class="contain">
           <ul class="bread">
             <li><a href="">Главная</a></li>
-            <li><a href="">Морепродукты</a></li>
-            <li>Креветки</li>
+            <li><a href="">Рецепты</a></li>
+            <li>Салат Цезарь с креветками</li>
           </ul>
-          <h1 class="h1">Креветки</h1>
+          <h1 class="h1">Рыбные котлеты из фарша лососевых</h1>
+          <div class="recipes__info">
+            <div class="recipes__inf-date">31 мая 2023</div>
+            <div class="recipes__inf-views">421</div>
+            <div class="recipes__inf-mess">56</div>
+          </div>
+
+          
+          <div class="recipe">
+            <div class="recipe__item">
+              <img src="img/recipe-1.jpg">
+              <div class="recipe__top-cont">
+                <div class="recipe__ing-txt">Готовим рыбные котлетки и супчик с фрикадельками из нежнейшего фарша лососёвых
+                </div>
+                <div class="h2 _orange">Ингредиенты: </div>
+                <ul class="recipe__ing-ul">
+                  <li><a href="">Тигровые креветки</a></li>
+                  <li>Салат Айсберг</li>
+                  <li>Приправа Цезарь “Knorr”</li>
+                  <li>Помидорки Черри</li>
+                  <li>Майонез</li>
+                  <li>Лимон/лайм</li>
+                  <li>Сыр</li>
+                </ul>
+              </div>
+            </div>
+            <div class="recipe__item">
+              <img src="img/recipe-2.jpg">
+              <div class="recipe__top-cont recipe__top-cont2">
+                <div class="h2 _blue">Пошаговый рецепт</div>
+                <div class="recipe__top-sub">
+                  <div class="recipe__sub-item">
+                    <div class="recipe__sub-numb">1</div>
+                    <div class="recipe__sub-txt">Креветки обжариваем 5 - 10 минут до готовности, <br> кладём к нарезанным овощам.
+                    </div>
+                  </div>
+                  <div class="recipe__sub-item">
+                    <div class="recipe__sub-numb">2</div>
+                    <div class="recipe__sub-txt">Для соуса смешиваем майонез, приправу и сок лайма или лимона.
+                    </div>
+                  </div>
+                  <div class="recipe__sub-item">
+                    <div class="recipe__sub-numb">3</div>
+                    <div class="recipe__sub-txt">Заправляем салат и, конечно, не забываем посыпать сверху тёртым сыром. Всё,
+                    вкуснейший классический салат готов!</div>
+                  </div>
+                  <div class="recipe__sub-item">
+                    <div class="recipe__sub-numb">4</div>
+                    <div class="recipe__sub-txt">На сковороде разогреваем масло и обжариваем на соседнем огне лук и чеснок,
+                    добавляем в сковороду креветки, обжариваем на соседнем огне.</div>
+                  </div>
+                  <div class="recipe__sub-item">
+                    <div class="recipe__sub-numb">5</div>
+                    <div class="recipe__sub-txt">На сковороде разогреваем масло и обжариваем на соседнем огне лук и чеснок,
+                    добавляем в сковороду креветки, обжариваем на соседнем огне.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="recipe__item recipe__item2">
+              <div class="recipe__gal-txt">Рецепт очень простой: В фарш добавляем лук, чеснок, яйцо 4 ложки муки.</div>
+              <div class="recipe__gal-row">
+                <img src="img/recipe-3.jpg">
+                <img src="img/recipe-4.jpg">
+              </div>
+            </div>
+            <div class="recipe__item recipe__item2">
+              <div class="recipe__gal-txt">А дальше лепим котлетки и хорошенько обваливаем в панировке.</div>
+              <div class="recipe__gal-row">
+                <img src="img/recipe-5.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="com">
+            <div class="com__row">
+              <div class="h2">Комментарии</div>
+              <a href="" class="com__btn">Написать комментарий</a>
+            </div>
+            
+            <div class="com__item">
+              <div class="com__name-row">
+                <div class="com__ava"><img src="img/ava-rev.svg"></div>
+                <div class="com__name">Дмитрий</div>
+              </div>
+              <div class="com__rev">Свежие, с небольшим количеством льда. Прекрасный продукт. Очень вкусно, будем брать еще !!</div>
+              <div class="recipes__inf-date">4 ноября 2023</div>
+            </div>
+            <div class="com__item">
+              <div class="com__name-row">
+                <div class="com__ava"><img src="img/ava-rev.svg"></div>
+                <div class="com__name">Ян Крылов</div>
+              </div>
+              <div class="com__rev">Отборные креветки, крупные, очень свежие, вкусные, тонкий слой глазури. Разморозили полчаса , буквально на 15-20 мин в маринад и на гриль!С бокальчиком ледяного белого вина…Ммм…Как будто снова побывали в Италии!</div>
+              <div class="recipes__inf-date">1 ноября 2023</div>
+            </div>
+          </div>
 
         </div>
+      </div><!--contain-->    
+    <div class="specipe__recommend">
+      <div class="contain">
+        <div class="h2 _blue">Рекомендуемые товары</div>
+        <div class="sproducts__row">
+          <div class="sproducts__col">
+            @@include('var/_sproducts__item.html',{
+              "img":"img/prod-9.jpg",
+              "title":"Морской коктейль<br> Морепродукты N1 500 г.",
+              "rate":"4.9",
+              "rev":"3 отзыва",
+              "sale":"",
+              "price":"",
+              "curr":"1 249 ₽",
+              "old":""
+            })
+          </div>
+          <div class="sproducts__col">
+            @@include('var/_sproducts__item.html',{
+              "img":"img/prod-10.jpg",
+              "title":"Чёрная осетровая икра 'Волга'<br> 50 гр",
+              "rate":"4.2",
+              "rev":"33 отзыва",
+              "sale":"-13%",
+              "price":"1350 ₽",
+              "curr":"",
+              "old":"1550 ₽"
+            })
+          </div>
+          <div class="sproducts__col">
+            @@include('var/_sproducts__item.html',{
+              "img":"img/prod-11.jpg",
+              "title":"Клешня Камчатского краба, <br> Размер L2-L4",
+              "rate":"4.9",
+              "rev":"3 отзыва",
+              "sale":"",
+              "price":"",
+              "curr":"1 249 ₽",
+              "old":""
+            })
+          </div>
+          <div class="sproducts__col">
+            @@include('var/_sproducts__item.html',{
+              "img":"img/prod-12.jpg",
+              "title":"Мясо краба (премиум) 520г.",
+              "rate":"4.9",
+              "rev":"3 отзыва",
+              "sale":"",
+              "price":"",
+              "curr":"1 249 ₽",
+              "old":""
+            })
+          </div>
+          <div class="sproducts__col">
+            @@include('var/_sproducts__item.html',{
+              "img":"img/prod-13.jpg",
+              "title":"Стейки трески",
+              "rate":"4.9",
+              "rev":"3 отзыва",
+              "sale":"",
+              "price":"",
+              "curr":"1 249 ₽",
+              "old":""
+            })
+          </div>
+          <div class="sproducts__col">
+            @@include('var/_sproducts__item.html',{
+              "img":"img/prod-14.jpg",
+              "title":"Стейки семги",
+              "rate":"4.9",
+              "rev":"3 отзыва",
+              "sale":"",
+              "price":"",
+              "curr":"1 249 ₽",
+              "old":""
+            })
+          </div>
+          <div class="sproducts__col">
+            @@include('var/_sproducts__item.html',{
+              "img":"img/prod-15.jpg",
+              "title":"Тунец Холодного копчения",
+              "rate":"4.9",
+              "rev":"3 отзыва",
+              "sale":"",
+              "price":"",
+              "curr":"1 249 ₽",
+              "old":""
+            })
+          </div>
+          <div class="sproducts__col">
+            @@include('var/_sproducts__item.html',{
+              "img":"img/prod-16.jpg",
+              "title":"Магаданские креветки <br> (60/80 шт. в 1 кг.)",
+              "rate":"5",
+              "rev":"0 отзыва",
+              "sale":"-20%",
+              "price":"1599 ₽/кг.",
+              "curr":"",
+              "old":"1990 ₽"
+            })
+          </div>
+        </div>
       </div>
-    </main>
-    @@include('var/_footer.html')
-  </div>
-  <!--wrapper-->
-  @@include('var/_scripts.html')
+    </div>
+  </main>
+  @@include('var/_footer.html')
+</div>
+<!--wrapper-->
+@@include('var/_scripts.html')
 </body>
 </html>
