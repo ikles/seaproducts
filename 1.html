@@ -30,48 +30,50 @@
           </div>
         </div>
         <div class="tslider">
-          <img src="img/tslider1.jpg" alt="">
-          <img src="img/tslider1.jpg" alt="">
-          <img src="img/tslider1.jpg" alt="">
-          <img src="img/tslider1.jpg" alt="">
-          <img src="img/tslider1.jpg" alt="">
+          @@include('var/_tslide.html')
+          @@include('var/_tslide.html')
+          @@include('var/_tslide.html')
+          @@include('var/_tslide.html')
+          @@include('var/_tslide.html')
         </div>
       </div>
       <section class="categories">
         <div class="contain">
-          <div class="categories__row">
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-1.jpg" class="categories__img" /></span>
-              <span class="categories__text">Креветки</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-2.jpg" class="categories__img" /></span>
-              <span class="categories__text">Краб</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-3.jpg" class="categories__img" /></span>
-              <span class="categories__text">Красная рыба</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-4.jpg" class="categories__img" /></span>
-              <span class="categories__text">Мидии</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-5.jpg" class="categories__img" /></span>
-              <span class="categories__text">Морепродукты</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-6.jpg" class="categories__img" /></span>
-              <span class="categories__text">Икра</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-7.jpg" class="categories__img" /></span>
-              <span class="categories__text">Рыба</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-8.jpg" class="categories__img" /></span>
-              <span class="categories__text">Рулет из рыбы</span>
-            </a>
+          <div class="categories__row-w">
+            <div class="categories__row">
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-1.jpg" class="categories__img" /></span>
+                <span class="categories__text">Креветки</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-2.jpg" class="categories__img" /></span>
+                <span class="categories__text">Краб</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-3.jpg" class="categories__img" /></span>
+                <span class="categories__text">Красная рыба</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-4.jpg" class="categories__img" /></span>
+                <span class="categories__text">Мидии</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-5.jpg" class="categories__img" /></span>
+                <span class="categories__text">Морепродукты</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-6.jpg" class="categories__img" /></span>
+                <span class="categories__text">Икра</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-7.jpg" class="categories__img" /></span>
+                <span class="categories__text">Рыба</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-8.jpg" class="categories__img" /></span>
+                <span class="categories__text">Рулет из рыбы</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -116,7 +118,11 @@
         </section>
         <section class="promo-products">
           <div class="contain">
-            <div class="h2 _orange"><span>Акционные товары</span></div>
+            <div class="h2 _orange hide-mob"><span>Акционные товары</span></div>            
+            <div class="show-mob">
+              <div class="h2 _orange"><span>Акции</span></div>
+            </div>
+
             <div class="sproducts__row">
               <div class="sproducts__col">
                 @@include('var/_sproducts__item.html',{
@@ -239,7 +245,10 @@
           </section>
           <section class="recommend-products">
             <div class="contain">
-              <div class="h2 _blue"><span>Морепродукты №1 рекомендует</span></div>
+              <div class="h2 _blue hide-mob"><span>Морепродукты №1 рекомендует</span></div>
+              <div class="show-mob">
+              <div class="h2 _blue"><span>Рекомендуем</span></div>
+            </div>
               <div class="sproducts__row">
                 <div class="sproducts__col">
                   @@include('var/_sproducts__item.html',{
@@ -342,7 +351,10 @@
           </section>
           <section class="recipes">
            <div class="contain">
-            <div class="h2"><span>Вкусные рецепты от интернет-магазина Морепродукты №1</span></div>
+            <div class="h2 hide-mob"><span>Вкусные рецепты от интернет-магазина Морепродукты №1</span></div>
+            <div class="show-mob">
+              <div class="h2"><span>Рецепты</span></div>
+            </div>
             <div class="recipes__row">
               <div class="recipes__col">
                 @@include('var/_recipes__item.html',{
@@ -382,7 +394,7 @@
         <section class="mreviews">
           <div class="mreviews__top">
             <div class="contain">
-              <div class="h2 reviews__h2">Независимые отзывы о Морепродукты №1</div>
+              <div class="h2 reviews__h2">Независимые отзывы <span class="hide-mob">о Морепродукты №1</span></div>
             </div>
           </div>
           <div class="mreviews__body">

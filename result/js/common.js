@@ -2,24 +2,39 @@ jQuery(document).ready(function( $ ) {
 
 
 
-  /*$('body').click(function () {
-    if( $(".toggle-mnu").hasClass("on") ){
-      $(".toggle-mnu").removeClass("on");
-      $(".top-mnu").fadeOut();
+  $('body').click(function () {
+    if( $('.top__ul').hasClass("open") ){
+      $(".top__ul").removeClass("open");
+      $("body").removeClass("body-open");
+      $('.tburger').removeClass('burger-open');
     }
-  });*/
+  });
 
 
-  /*$(".top-mnu").click(function (e) {
+  $(".top").click(function (e) {
     e.stopPropagation();
-  });*/
+  });
 
 
-  /*$('.burger').click(function () {
+  $('.tburger').click(function () {
     $(this).toggleClass('burger-open');
     $('body').toggleClass("body-open");
-    $('.header__col').toggleClass("open");    
-  });*/
+    $('.top__ul').toggleClass("open");    
+  });
+
+
+  if( $(window).width() < 1470 ) {
+    $(".categories__row-w").mCustomScrollbar({
+      axis: "x",
+      theme: "dark-3",
+      mouseWheel: 0,
+      scrollInertia: '230'
+    });    
+  }
+
+  if( $(window).width() > 1469 ) {
+    $(".categories__row-w").mCustomScrollbar("destroy");
+  }
 
 
 

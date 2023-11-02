@@ -31,6 +31,22 @@
     <img src="img/fish1.svg" alt="" class="fish1">
     <div class="contain">
       <div class="top__row">
+        <div class="top__pda">
+          <a href="" class="logo__pda">
+            <img src="img/logo-pda.svg" alt="">
+          </a>
+          <a href="" class="action__pda"><img src="img/tsearch.svg" alt=""></a>
+          <a href="" class="action__pda tfav">
+            <img src="img/tfav.svg" alt="">
+            <span>0</span>
+          </a>
+          <a href="tel:8 (925) 225-27-70" class="action__pda"><img src="img/ttel.svg" alt=""></a>
+          <a href="" class="action__pda tcart">
+            <img src="img/tcart.svg" alt="">
+            <span>0</span>
+          </a>
+          <div class="tburger"></div>                  
+        </div>
         <ul class="top__ul">
           <li><a href="">О нас</a></li>
           <li><a href="">Доставка и оплата</a></li>
@@ -43,12 +59,14 @@
           <img class="fish2" src="img/fish2.svg">
           <img class="fish3" src="img/fish3.svg">
         </div>
-        <a href="" class="shops">
-          <span>Наши магазины</span>            
-        </a>
-        <a href="" class="user">
-          <span>Личный кабинет</span>
-        </a>
+        <div class="top__actions">
+          <a href="" class="shops">
+            <span>Наши магазины</span>            
+          </a>
+          <a href="" class="user">
+            <span>Личный кабинет</span>
+          </a>
+        </div>
       </div>
     </div>
     <img src="img/fish4.svg" alt="" class="fish4">
@@ -91,48 +109,70 @@
           </div>
         </div>
         <div class="tslider">
-          <img src="img/tslider1.jpg" alt="">
-          <img src="img/tslider1.jpg" alt="">
-          <img src="img/tslider1.jpg" alt="">
-          <img src="img/tslider1.jpg" alt="">
-          <img src="img/tslider1.jpg" alt="">
+          <picture>
+<source srcset="img/tslider1.jpg" type="image/jpeg" media="(min-width:768px)" /> <!--меньше этого будет другая-->
+<source srcset="img/tslider-mob1.jpg" type="image/jpeg" media="(min-width:200px)" /> <!--больше этого будет эта-->            
+<img src="img/tslider1.jpg" alt="">
+</picture>
+          <picture>
+<source srcset="img/tslider1.jpg" type="image/jpeg" media="(min-width:768px)" /> <!--меньше этого будет другая-->
+<source srcset="img/tslider-mob1.jpg" type="image/jpeg" media="(min-width:200px)" /> <!--больше этого будет эта-->            
+<img src="img/tslider1.jpg" alt="">
+</picture>
+          <picture>
+<source srcset="img/tslider1.jpg" type="image/jpeg" media="(min-width:768px)" /> <!--меньше этого будет другая-->
+<source srcset="img/tslider-mob1.jpg" type="image/jpeg" media="(min-width:200px)" /> <!--больше этого будет эта-->            
+<img src="img/tslider1.jpg" alt="">
+</picture>
+          <picture>
+<source srcset="img/tslider1.jpg" type="image/jpeg" media="(min-width:768px)" /> <!--меньше этого будет другая-->
+<source srcset="img/tslider-mob1.jpg" type="image/jpeg" media="(min-width:200px)" /> <!--больше этого будет эта-->            
+<img src="img/tslider1.jpg" alt="">
+</picture>
+          <picture>
+<source srcset="img/tslider1.jpg" type="image/jpeg" media="(min-width:768px)" /> <!--меньше этого будет другая-->
+<source srcset="img/tslider-mob1.jpg" type="image/jpeg" media="(min-width:200px)" /> <!--больше этого будет эта-->            
+<img src="img/tslider1.jpg" alt="">
+</picture>
         </div>
       </div>
       <section class="categories">
         <div class="contain">
-          <div class="categories__row">
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-1.jpg" class="categories__img" /></span>
-              <span class="categories__text">Креветки</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-2.jpg" class="categories__img" /></span>
-              <span class="categories__text">Краб</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-3.jpg" class="categories__img" /></span>
-              <span class="categories__text">Красная рыба</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-4.jpg" class="categories__img" /></span>
-              <span class="categories__text">Мидии</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-5.jpg" class="categories__img" /></span>
-              <span class="categories__text">Морепродукты</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-6.jpg" class="categories__img" /></span>
-              <span class="categories__text">Икра</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-7.jpg" class="categories__img" /></span>
-              <span class="categories__text">Рыба</span>
-            </a>
-            <a href="" class="categories__item">
-              <span class="categories__img-w"><img src="img/cat-8.jpg" class="categories__img" /></span>
-              <span class="categories__text">Рулет из рыбы</span>
-            </a>
+          <div class="categories__row-w">
+            <div class="categories__row">
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-1.jpg" class="categories__img" /></span>
+                <span class="categories__text">Креветки</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-2.jpg" class="categories__img" /></span>
+                <span class="categories__text">Краб</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-3.jpg" class="categories__img" /></span>
+                <span class="categories__text">Красная рыба</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-4.jpg" class="categories__img" /></span>
+                <span class="categories__text">Мидии</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-5.jpg" class="categories__img" /></span>
+                <span class="categories__text">Морепродукты</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-6.jpg" class="categories__img" /></span>
+                <span class="categories__text">Икра</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-7.jpg" class="categories__img" /></span>
+                <span class="categories__text">Рыба</span>
+              </a>
+              <a href="" class="categories__item">
+                <span class="categories__img-w"><img src="img/cat-8.jpg" class="categories__img" /></span>
+                <span class="categories__text">Рулет из рыбы</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -177,7 +217,11 @@
         </section>
         <section class="promo-products">
           <div class="contain">
-            <div class="h2 _orange"><span>Акционные товары</span></div>
+            <div class="h2 _orange hide-mob"><span>Акционные товары</span></div>            
+            <div class="show-mob">
+              <div class="h2 _orange"><span>Акции</span></div>
+            </div>
+
             <div class="sproducts__row">
               <div class="sproducts__col">
                 <div class="sproducts__item">
@@ -500,7 +544,10 @@
           </section>
           <section class="recommend-products">
             <div class="contain">
-              <div class="h2 _blue"><span>Морепродукты №1 рекомендует</span></div>
+              <div class="h2 _blue hide-mob"><span>Морепродукты №1 рекомендует</span></div>
+              <div class="show-mob">
+              <div class="h2 _blue"><span>Рекомендуем</span></div>
+            </div>
               <div class="sproducts__row">
                 <div class="sproducts__col">
                   <div class="sproducts__item">
@@ -803,7 +850,10 @@
           </section>
           <section class="recipes">
            <div class="contain">
-            <div class="h2"><span>Вкусные рецепты от интернет-магазина Морепродукты №1</span></div>
+            <div class="h2 hide-mob"><span>Вкусные рецепты от интернет-магазина Морепродукты №1</span></div>
+            <div class="show-mob">
+              <div class="h2"><span>Рецепты</span></div>
+            </div>
             <div class="recipes__row">
               <div class="recipes__col">
                 <div class="recipes__item">
@@ -859,7 +909,7 @@
         <section class="mreviews">
           <div class="mreviews__top">
             <div class="contain">
-              <div class="h2 reviews__h2">Независимые отзывы о Морепродукты №1</div>
+              <div class="h2 reviews__h2">Независимые отзывы <span class="hide-mob">о Морепродукты №1</span></div>
             </div>
           </div>
           <div class="mreviews__body">
@@ -1104,7 +1154,7 @@
             <a href=""><img src="img/soc-2.svg" /></a>
           </div>
         </div>
-        <div class="footer__rew">
+        <div class="footer__rew hide-pda">
           <div class="footer__subtitle">Отзывы на Яндекс.Картах</div>
           <div class="footer__rew-row">
             <a href=""><img src="img/rew.jpg" /></a>
@@ -1131,6 +1181,15 @@
           </div>
           <div class="footer__mess-txt">— наши мессенджеры</div>
         </div>
+
+        <div class="footer__rew show-pda">
+          <div class="footer__subtitle">Отзывы на Яндекс.Картах</div>
+          <div class="footer__rew-row">
+            <a href=""><img src="img/rew.jpg" /></a>
+            <a href=""><img src="img/rew.jpg" /></a>
+          </div>
+        </div>
+
       </div>
       <div class="footer__col-4">
         <div class="footer__subtitle">Информация</div>
@@ -1166,6 +1225,7 @@
 <script src="js/wNumb.min.js"></script>
 <script src="js/select2.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/common.js"></script>
       </body>
 
