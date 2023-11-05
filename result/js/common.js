@@ -8,18 +8,65 @@ jQuery(document).ready(function( $ ) {
       $("body").removeClass("body-open");
       $('.tburger').removeClass('burger-open');
     }
+    $('.catalog__l').removeClass('act');
+    $("body").removeClass("body-open2");
+    $('.smodal').hide();
+    $('.burger__link').removeClass('active');
+    $('.burger__catalog-w').hide();
+    $('.tburger').removeClass('burger-open');    
   });
 
 
-  $(".top").click(function (e) {
+  $(".top, .catalog__l, .catalog__btn, .smodal, .burger__link, .burger__catalog-w").click(function (e) {
     e.stopPropagation();
   });
 
 
-  $('.tburger').click(function () {
-    $(this).toggleClass('burger-open');
-    $('body').toggleClass("body-open");
-    $('.top__ul').toggleClass("open");    
+
+  $('.saction').click(function () {    
+    $(this).find('.smodal').toggle();
+  });
+
+  $('.close').click(function () {
+    $(this).closest('.smodal').hide();
+  });
+
+
+  $('.categ__parent').click(function () {
+    $(this).toggleClass('active');
+  })
+
+
+  //$('.top, .footer').addClass('animate');
+
+
+  $('.catalog__btn').click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass('act');
+    $('.catalog__l').toggleClass('act');
+    $("body").toggleClass("body-open2");
+  });
+
+
+  $('.tburger').click(function (e) {    
+    e.preventDefault();
+    $(this).toggleClass('burger-open');    
+    $('.burger__catalog-w').toggle();
+  });
+
+
+  $('a[href*=\\#]:not([href=\\#])').click(function () {
+    elementClick = $(this).attr("href");
+    destination = $(elementClick).offset().top;
+    $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination + 0}, 600);
+    return false;
+  });
+
+
+  $('.burger__link').click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('.burger__catalog-w').toggle();
   });
 
 
@@ -90,9 +137,40 @@ jQuery(document).ready(function( $ ) {
     pauseOnHover: true,
   });
 
+  jQuery("body").mousemove(
+    function(e){
+
+      /*var offset = $(this).offset();
+      var xPos = e.pageX - offset.left;
+      var yPos = e.pageY - offset.top;
+      var mouseXPercent = Math.round(xPos / $(this).width() * 100);
+      var mouseYPercent = Math.round(yPos / $(this).height() * 100);
 
 
-  
+      console.log(mouseXPercent);
+      console.log(mouseYPercent);
+
+      $('.top__vawe').animate({left: mouseXPercent},{duration: 50, queue: false, easing: 'linear'});*/
+
+      /*var diffX = $('#Parallax').width() - $('.top').width();
+      var diffY = $('#Parallax').height() - $('.top').height();
+      var myX = diffX * (mouseXPercent / 1920);
+      var myY = diffY * (mouseYPercent / 1080);
+      var cssObj = {
+        'left': myX + 'px',
+        'top': myY + 'px'
+      }*/
+
+      /*$('.top__vawe').addClass('move');
+
+      setTimeout(function () {
+        $('.top__vawe').removeClass('move');
+      }, 1000);*/
+    });
+
+
+
+
   if( $('.buy__quan').length ) {    
     $('.buy__quan').each(function () {
       const self = $(this);
@@ -109,8 +187,7 @@ jQuery(document).ready(function( $ ) {
     })
   }
 
-  
-//$('.top, .footer').addClass('animate');
+
 
 /************************************/
 
@@ -147,19 +224,14 @@ $('.eye-3').click(function (e) {
     $('.modal-form__block').click(function (e) {
       e.stopPropagation();  
     });
-    
+
   }
 
   popup('.link2', '.modal-overlay_2', '.modal-close_2');
   popup('.link', '.modal-overlay_1', '.modal-close_1');
 
 
-  $('a[href*=\\#]:not([href=\\#])').click(function () {
-    elementClick = $(this).attr("href");
-    destination = $(elementClick).offset().top;
-    $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 0}, 600);
-    return false;
-  });
+
 
 
   $('.card__mn-item').click(function (e) {
@@ -219,7 +291,7 @@ $('.eye-3').click(function (e) {
 
     const priceTotalStart = document.getElementById('price__total-start');
     const priceTotalEnd = document.getElementById('price__total-end');
-    
+
 
     //Значения из ползунков в инпуты
     priceSlider.noUiSlider.on('update', function(values, handle) {
